@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dip">
+
+    <TextView
+        android:id="@+id/tv_demo_rate_value"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="1.31"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_max="wrap" />
+
+    <TextView
+        android:id="@+id/tv_demo_per_cent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dip"
+        android:text="%"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/tv_demo_rate_value"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@id/tv_demo_rate_value"
+        app:layout_constraintRight_toLeftOf="@id/gline_demo_v" />
+
+    <TextView
+        android:id="@+id/tv_demo_annual_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="年利率"
+        android:textSize="12sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/tv_demo_rate_value"
+        app:layout_constraintRight_toLeftOf="@id/gline_demo_v"
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_rate_value" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gline_demo_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <TextView
+        android:id="@+id/tv_demo_product_name"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="工资理财118号"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toRightOf="@id/gline_demo_v"
+        app:layout_constraintWidth_max="wrap" />
+
+    <TextView
+        android:id="@+id/tv_demo_product_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="5000元申购"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/tv_demo_annual_rate"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@id/gline_demo_v"
+        app:layout_constraintRight_toLeftOf="@id/iv_demo_product_back"
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_product_name"
+        app:layout_constraintVertical_bias="1" />
+
+    <TextView
+        android:id="@+id/tv_demo_product_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:padding="1dip"
+        android:singleLine="true"
+        android:text="热销产品"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@id/tv_demo_product_name"
+        app:layout_constraintRight_toLeftOf="@id/iv_demo_product_back" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_demo_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tv_demo_annual_rate,tv_demo_product_desc" />
+
+    <ImageView
+        android:id="@+id/iv_demo_product_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toTopOf="@id/barrier_demo_v"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
