@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.3" />
+<!--    layout_constraintGuide_percent，指定在父控件中的宽度或高度的百分比，如0.8，表示距离顶部或者左侧的80%的距离-->
 
     <TextView
         android:id="@+id/tv_demo_product_name"
