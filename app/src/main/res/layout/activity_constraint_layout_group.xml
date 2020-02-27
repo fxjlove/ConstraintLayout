@@ -11,13 +11,17 @@
 注意 多个Group 部件可以引用相同的控件，这时Group 在xml中的定义顺序将决定这个控件最终的可见性。 -->
 
 
-     <!--   [例]:控制控件A、控件B同时显示和隐藏,使用android.support.constraint.Group解决 -->
+    <!--   [例]:控制控件A、控件B同时显示和隐藏,使用android.support.constraint.Group解决 -->
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
-        app:constraint_referenced_ids="buttonA,buttonB" />
+        app:constraint_referenced_ids="buttonA,buttonB"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonA"

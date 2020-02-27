@@ -33,8 +33,7 @@
         app:layout_constraintRight_toRightOf="parent" />
 
 
-
-   <!-- 链样式
+    <!-- 链样式
 
     当链的第一个元素设置了layout_constraintHorizontal_chainStyle或layout_constraintVertical_chainStyle属性，链样式将按照指定的方式改变（默认是CHAIN_SPREAD）。
 
@@ -42,15 +41,15 @@
     权重链在CHAIN_SPREAD模式下，如果一些控件设置了MATCH_CONSTRAINT，这些控件将分担可用空间；
     CHAIN_SPREAD_INSIDE元素展开，但链的端点不会展开；
     CHAIN_PACKED链中的元素将包裹在一起。子控件的水平或垂直方向的偏置bias属性会影响包裹中元素的位置。-->
-<!--    [例2]: A、B、C三个空间平分空间,使用app:layout_constraintHorizontal_chainStyle="spread"默认属性-->
+    <!--    [例2]: A、B、C三个空间平分空间,使用app:layout_constraintHorizontal_chainStyle="spread"默认属性-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonA"
-       >
+        app:layout_constraintTop_toBottomOf="@+id/buttonA">
+
         <Button
             android:id="@+id/buttonA1"
             android:layout_width="40dip"
@@ -78,15 +77,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-<!--    [例3]: A、B、C三个空间平分空间,首尾控件靠父布局边缘,使用app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+    <!--    [例3]: A、B、C三个空间平分空间,首尾控件靠父布局边缘,使用app:layout_constraintHorizontal_chainStyle="spread_inside"-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/cl1"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/cl1">
+
         <Button
             android:id="@+id/buttonA2"
             android:layout_width="40dip"
@@ -114,14 +112,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-<!--    [例4]: A、B、C三个空间平分首尾空间,使用app:layout_constraintHorizontal_chainStyle="packed"-->
+    <!--    [例4]: A、B、C三个空间平分首尾空间,使用app:layout_constraintHorizontal_chainStyle="packed"-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/cl2"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/cl2">
+
         <Button
             android:id="@+id/buttonA3"
             android:layout_width="40dip"
@@ -150,15 +148,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-  <!--  [例5]: A、B、C三个空间平分首尾空间,增加偏移属性偏移左方20%,使用app:layout_constraintHorizontal_bias="0.2"、
+    <!--  [例5]: A、B、C三个空间平分首尾空间,增加偏移属性偏移左方20%,使用app:layout_constraintHorizontal_bias="0.2"、
     app:layout_constraintHorizontal_chainStyle="packed"-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/cl3"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/cl3">
+
         <Button
             android:id="@+id/buttonA4"
             android:layout_width="40dip"

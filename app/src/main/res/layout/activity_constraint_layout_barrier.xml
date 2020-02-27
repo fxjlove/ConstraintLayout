@@ -10,7 +10,7 @@
 constraint_referenced_ids用来设置要参考的控件id,多个控件id间以逗号的形式隔开。 -->
 
 
-     <!--   [例]:控件C始终在控件A、控件B右侧,使用android.support.constraint.Barrier来管理控件A、控件B-->
+    <!--   [例]:控件C始终在控件A、控件B右侧,使用android.support.constraint.Barrier来管理控件A、控件B-->
     <Button
         android:id="@+id/buttonA"
         android:layout_width="wrap_content"

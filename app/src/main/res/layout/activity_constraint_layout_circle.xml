@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<!--
+    <!--
     圆形定位(1.1版本中增加)
 
     您可以以角度和距离约束窗口小部件中心相对于另一个窗口小部件中心。这允许您将小部件放在圆上（如下图）。可以使用以下属性：
@@ -29,38 +29,55 @@
         android:id="@+id/buttonB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
         android:text="B"
+        app:layout_constraintBottom_toTopOf="@+id/buttonA"
         app:layout_constraintCircle="@+id/buttonA"
         app:layout_constraintCircleAngle="45"
         app:layout_constraintCircleRadius="100dp"
-        />
+        app:layout_constraintEnd_toEndOf="@+id/buttonC"
+        app:layout_constraintStart_toStartOf="@+id/buttonC" />
+
     <Button
         android:id="@+id/buttonC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginTop="23dp"
         android:text="C"
         app:layout_constraintCircle="@+id/buttonA"
         app:layout_constraintCircleAngle="135"
         app:layout_constraintCircleRadius="100dp"
-        />
+        app:layout_constraintStart_toStartOf="@+id/buttonA"
+        app:layout_constraintTop_toBottomOf="@+id/buttonA" />
+
     <Button
         android:id="@+id/buttonD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginRight="71dp"
         android:text="D"
         app:layout_constraintCircle="@+id/buttonA"
         app:layout_constraintCircleAngle="225"
         app:layout_constraintCircleRadius="100dp"
-        />
+        app:layout_constraintEnd_toEndOf="@+id/buttonA"
+        app:layout_constraintTop_toBottomOf="@+id/buttonA" />
+
     <Button
         android:id="@+id/buttonE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
         android:text="E"
+        app:layout_constraintBottom_toTopOf="@+id/buttonA"
         app:layout_constraintCircle="@+id/buttonA"
         app:layout_constraintCircleAngle="315"
         app:layout_constraintCircleRadius="100dp"
-        />
+        app:layout_constraintEnd_toEndOf="@+id/buttonD"
+        app:layout_constraintStart_toStartOf="@+id/buttonD" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

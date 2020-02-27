@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<!--    如上设置了android:layout_marginTop="100dip" 但是失效,应为设置某一边的边距则需要设置某一边的约束目标对象（比如这里是parent）-->
+    <!--    如上设置了android:layout_marginTop="100dip" 但是失效,应为设置某一边的边距则需要设置某一边的约束目标对象（比如这里是parent）-->
 
 
     <Button
@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="A" />
+        android:text="A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
