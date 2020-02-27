@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Guideline
+
+     Guideline是只能用在ConstraintLayout布局里面的一个工具类，用于辅助布局，类似为辅助线，可以设置android:orientation属性来确定是横向的还是纵向的。
+
+     当设置为vertical的时候，Guideline的宽度为0，高度是parent也就是ConstraintLayout的高度
+     同样设置为horizontal的时候，高度为0，宽度是parent的宽度
+     重要的是Guideline是不会显示到界面上的，默认是GONE的。
+
+     Guideline还有三个重要的属性，每个Guideline只能指定其中一个：
+
+     layout_constraintGuide_begin，指定左侧或顶部的固定距离，如100dp，在距离左侧或者顶部100dp的位置会出现一条辅助线
+     layout_constraintGuide_end，指定右侧或底部的固定距离，如30dp，在距离右侧或底部30dp的位置会出现一条辅助线
+     layout_constraintGuide_percent，指定在父控件中的宽度或高度的百分比，如0.8，表示距离顶部或者左侧的80%的距离
+ -->
+    <!--    [例1]: 控件A在屏幕的10%处,控件B在距离左边150dip处,控件C距离右边10dip处-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        app:layout_constraintLeft_toRightOf="@id/guideline1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="150dip" />
+
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B"
+        app:layout_constraintLeft_toRightOf="@id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dip" />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        app:layout_constraintRight_toLeftOf="@id/guideline3" />
+
+    <!-- [例2]: 控件A占屏幕宽度的一半，可以用layout_constraintGuide_percent-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonA">
+<androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <Button
+            android:id="@+id/buttonA1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="A"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guideline" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

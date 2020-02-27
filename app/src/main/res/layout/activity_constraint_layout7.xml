@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--控件尺寸约束
+
+可以通过以3种不同方式设置android:layout_width和 android:layout_height属性来指定控件的尺寸：
+
+使用特定尺寸（文字值，例如123dp或Dimension参考）
+使用WRAP_CONTENT，这将要求控件计算自己的大小
+使用0dp，相当于“ MATCH_CONSTRAINT”
+————————————————
+版权声明：本文为CSDN博主「zping0808」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/zping0808/article/details/83064568
+
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

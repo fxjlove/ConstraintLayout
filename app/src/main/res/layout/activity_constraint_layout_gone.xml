@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--    此时发现空间C紧跟空间A,没有距离控件A右边20dip,不满足需求,可以使用layout_goneMarginLeft解决-->
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A" />
+
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="B"
+        app:layout_constraintLeft_toRightOf="@id/buttonA"
+        />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_goneMarginLeft="20dip"
+        android:text="C"
+        app:layout_constraintLeft_toRightOf="@id/buttonB"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

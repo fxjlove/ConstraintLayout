@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--尺寸限制
+
+    ConstraintLayout上的最小尺寸
+
+    您可以为ConstraintLayout自身定义最小和最大尺寸：
+
+    android:minWidth 设置布局的最小宽度
+    android:minHeight 设置布局的最小高度
+    android:maxWidth 设置布局的最大宽度
+    android:maxHeight 设置布局的最大高度
+
+    这些属性仅在宽高设为WRAP_CONTENT时有效！
+
+    -->
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dip"
+        android:text="12345678901234567890" />
+</androidx.constraintlayout.widget.ConstraintLayout>

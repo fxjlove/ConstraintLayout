@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--
+    MATCH_CONSTRAINT（0dp） dimensions 填充父窗体约束（1.1中添加）
+
+    当宽高被设为MATCH_CONSTRAINT（0dp），这个控件将尝试占据布局上所有可用的地方，但同时会被这些属性所限制：
+
+    layout_constraintWidth_min和layout_constraintHeight_min：将设置尺寸的最小大小
+    layout_constraintWidth_max和layout_constraintHeight_max：将设置尺寸的最大大小
+    layout_constraintWidth_percent和layout_constraintHeight_percent：将尺寸的大小设置为父级的百分比
+    注意：
+
+    min和max的值可以是dp中的尺寸，也可以是“wrap”，它将使用与其相同的值WRAP_CONTENT。当使用百分比尺寸的时候，应当设置宽高为MATCH_CONSTRAINT；父容器需要设置app:layout_constraintWidth_default=”percent”或app:layout_constraintHeight_default=”percent”（在1.1-beta2以后不再必须设置）
+       -->
+
+<!--    [例1]: 控件A位于父控件的中间且宽度最大为100dip-->
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_max="100dip"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="AAAAAAAAAAA" />
+
+
+<!--    [例2]: 控件B位于父控件的中间且宽度为父控件的一半
+
+注意:要使用百分比，您需要设置以下内容：
+
+尺寸应设置为MATCH_CONSTRAINT（0dp）
+默认值应设置为百分比app:layout_constraintWidth_default="percent" 或app:layout_constraintHeight_default="percent"
+（**注意：**这在1.1-beta1和1.1-beta2中是必需的，但如果定义了percent属性，则在以下版本中不需要）
+然后将layout_constraintWidth_percent 或layout_constraintHeight_percent属性设置为0到1之间的值-->
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:text="B"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonA"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
